@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فراخوان ایده‌های نوآورانه و کارآفرینانه | دانشکده ادبیات دانشگاه کردستان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F6F4; --ink:#10302E; --muted:#47605D; --card:#FFFFFF; --line:#C9D9D4;
+  --deep:#0F3D3E; --on-deep:#EAF3F0; --sun:#F2B705; --on-sun:#10302E; --berry:#B5233A;
+  --body:"Vazirmatn",Tahoma,sans-serif; --display:"Lalezar","Vazirmatn",Tahoma,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0B1918; --ink:#E4EFEB; --muted:#9BB3AE; --card:#132928; --line:#27423F; --deep:#07211F;
+  }
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0B1918;--ink:#E4EFEB;--muted:#9BB3AE;--card:#132928;--line:#27423F;--deep:#07211F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.9 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1040px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:4.5rem}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.35;margin:0}
+h2{font-size:clamp(1.9rem,4.5vw,2.6rem);margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 2rem}
+
+/* hero */
+.hero{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden;padding-block:5rem 5.5rem}
+.hero::before{content:"";position:absolute;inset-inline-start:-160px;top:-160px;width:620px;height:620px;border-radius:50%;
+  background:repeating-radial-gradient(circle,transparent 0 22px,rgba(242,183,5,.16) 22px 24px);pointer-events:none}
+.hero .wrap{position:relative}
+.kicker{display:inline-block;font-weight:500;font-size:.95rem;padding:.25rem .9rem;border:1px solid rgba(234,243,240,.4);border-radius:99px;margin-bottom:1.5rem}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.3;max-width:14ch}
+.hero p{max-width:52ch;margin:1.5rem 0 2.2rem;color:rgba(234,243,240,.86);font-size:1.15rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:700 1rem var(--body);text-decoration:none;
+  background:var(--sun);color:var(--on-sun);padding:.8rem 1.6rem;border-radius:12px;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor;margin-inline-start:.6rem}
+.hero .btn.ghost{color:var(--on-deep)}
+
+
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+figure.photo{margin:0;width:min(100%,290px)}
+figure.photo img{display:block;width:100%;height:auto;border-radius:14px;border:3px solid var(--sun);box-shadow:-12px 12px 0 rgba(242,183,5,.28)}
+figure.photo figcaption{margin-top:1.2rem;font-size:.92rem;color:rgba(234,243,240,.8)}
+
+/* inspiration */
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:0;list-style:none}
+.chips li{background:var(--card);border:1px solid var(--line);padding:.45rem 1.1rem;border-radius:99px;font-weight:500}
+
+/* steps */
+.steps{list-style:none;margin:2.5rem 0 0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;inset-inline-start:1.55rem;top:.5rem;bottom:.5rem;border-inline-start:2px dashed var(--line)}
+.steps li{position:relative;padding-inline-start:4.6rem;margin-bottom:2.2rem}
+.steps li:last-child{margin-bottom:0}
+.steps .n{position:absolute;inset-inline-start:0;top:0;width:3.1rem;height:3.1rem;border-radius:50%;background:var(--sun);color:var(--on-sun);
+  display:grid;place-items:center;font:400 1.6rem/1 var(--display)}
+.steps h3{font-size:1.5rem}
+.steps p{margin:.2rem 0 0;color:var(--muted);max-width:58ch}
+
+/* plan */
+.plan{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
+.qs{margin:0;padding:0;list-style:none;display:grid;gap:.8rem}
+.qs li{background:var(--card);border:1px solid var(--line);border-inline-start:5px solid var(--sun);border-radius:10px;padding:.9rem 1.2rem}
+.qs b{display:block;font-weight:700}
+.qs span{color:var(--muted);font-size:.97rem}
+.tpl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+.tpl h3{font-size:1.4rem;margin-bottom:.4rem}
+.tpl pre{white-space:pre-wrap;font:400 .95rem/1.9 var(--body);margin:.6rem 0 1.1rem;color:var(--muted)}
+.ok{display:none;margin-inline-start:.7rem;font-weight:500}
+.ok.on{display:inline}
+
+/* idea assistant */
+.idea-assistant{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.5rem;align-items:start}
+.idea-assistant aside{color:var(--muted)}
+.idea-assistant label{display:block;font-weight:700;margin-bottom:.4rem}
+.idea-assistant input,.idea-assistant textarea{width:100%;font:400 1rem/1.8 var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem}
+.idea-assistant textarea{min-height:15rem;resize:vertical}
+.ai-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.ai-links a{display:inline-flex;align-items:center;text-decoration:none;font-weight:700;background:var(--deep);color:var(--on-deep);padding:.55rem .9rem;border-radius:10px}
+.ai-links a:hover{filter:brightness(1.2)}
+.ai-note{font-size:.92rem;color:var(--muted);margin:.7rem 0 0}
+.ai-status{min-height:1.8em;margin:.4rem 0 0;color:var(--muted);font-size:.92rem}
+
+/* contacts */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.who{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.3rem;display:flex;flex-direction:column;gap:.9rem}
+.who h3{font-size:1.35rem}
+.who p{margin:0;color:var(--muted);font-size:.97rem;line-height:1.8;flex:1}
+.who a{display:inline-flex;justify-content:space-between;align-items:center;text-decoration:none;font-weight:700;
+  background:var(--deep);color:var(--on-deep);padding:.65rem 1rem;border-radius:10px}
+.who a:hover{filter:brightness(1.25)}
+.who a bdi{direction:ltr;font-family:Tahoma,sans-serif;font-size:.95rem}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding-block:1rem}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 1.6rem/1 var(--display);color:var(--berry)}
+details[open] summary::after{content:"−"}
+details p{margin:.6rem 0 0;color:var(--muted);max-width:62ch}
+
+footer{background:var(--deep);color:var(--on-deep);padding-block:3rem;text-align:center}
+footer h2{font-size:2rem}
+footer p{margin:.4rem 0 1.4rem;color:rgba(234,243,240,.8)}
+
+@media (max-width:760px){
+  section{padding-block:3.2rem}
+  .plan{grid-template-columns:1fr}
+  .idea-assistant{grid-template-columns:1fr}
+  .hero .wrap{grid-template-columns:1fr;gap:2.5rem}
+  figure.photo{width:min(100%,260px)}
+  .btn.ghost{margin:.6rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+    <span class="kicker">دانشکده ادبیات، دانشگاه کردستان</span>
+    <h1>ایده‌ات را از حاشیه‌ی دفترت بیاور وسط.</h1>
+    <p>فراخوان جذب ایده‌های نوآورانه و کارآفرینانه دانشجویان. اگر ایده‌ای داری که می‌تواند رشد کند و به یک طرح اجرایی تبدیل شود، همین‌جا جایش است.</p>
+    <a class="btn" href="#send">ایده‌ام را می‌فرستم</a>
+    <a class="btn ghost" href="#idea-helper">برای ایده‌پردازی کمک بگیر</a>
+    </div>
+    <figure class="photo"><img src="data:image/jpeg;base64,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" alt="ساختمان دانشکده ادبیات دانشگاه کردستان"><figcaption>دانشکده ادبیات، دانشگاه کردستان</figcaption></figure>
+  </div>
+</header>
+
+<section id="what">
+  <div class="wrap">
+    <h2>ایده‌ی کارآفرینانه یعنی چه؟</h2>
+    <p class="lead">یعنی راه‌حلی برای یک نیاز واقعی؛ چیزی که کسی بتواند از آن استفاده کند و بتوان آن را اجرا و گسترش داد. لازم نیست ایده‌ات فنی یا پیچیده باشد. رشته‌ی تو خودش سرمایه است. چند مسیر برای شروع فکر کردن:</p>
+    <ul class="chips">
+      <li>گردشگری ادبی و میراث زبانی</li>
+      <li>نشر و تولید محتوای دیجیتال</li>
+      <li>آموزش زبان</li>
+      <li>ترجمه و محلی‌سازی</li>
+      <li>ابزارها و اپلیکیشن‌های زبانی</li>
+      <li>پادکست و کتاب صوتی</li>
+      <li>محصولات فرهنگی و خلاق</li>
+    </ul>
+  </div>
+</section>
+
+<section id="idea-helper" style="background:var(--card)">
+  <div class="wrap">
+    <h2>هنوز ایده‌ات کامل نیست؟</h2>
+    <p class="lead">از یک مسئله‌ی واقعی در زبان و ادبیات شروع کن. متن آماده‌ی زیر را می‌توانی در ChatGPT، Gemini یا Claude استفاده کنی؛ هیچ اطلاعاتی خودکار ارسال نمی‌شود.</p>
+    <div class="idea-assistant">
+      <aside>
+        <p>هوش مصنوعی می‌تواند برای پیدا کردن مسئله و مرتب‌کردن ایده کمک کند؛ اما تجربه و شناخت خودت از رشته، بخش اصلی ایده است. خروجی را بررسی کن و جزئیات رسمی فراخوان را فقط از همین صفحه پیگیری کن.</p>
+        <div class="ai-links" aria-label="بازکردن سرویس هوش مصنوعی">
+          <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>
+          <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>
+          <a href="https://claude.ai/new" target="_blank" rel="noopener">Claude</a>
+        </div>
+      </aside>
+      <div>
+        <label for="idea-interest">رشته، علاقه یا مسئله‌ای که ذهنت را درگیر کرده</label>
+        <input id="idea-interest" type="text" maxlength="120" placeholder="مثلاً تمرین مکالمه عربی یا دسترسی به منابع زبان کردی">
+        <label for="ai-prompt" style="margin-top:1rem">متن آماده برای گفت‌وگو</label>
+        <textarea id="ai-prompt" rows="10" readonly aria-label="متن آماده برای شروع گفت‌وگو با هوش مصنوعی"></textarea>
+        <button class="btn" id="copy-ai-prompt" type="button" style="margin-top:.7rem">کپی متن آماده</button>
+        <p class="ai-status" id="ai-copy-status" role="status" aria-live="polite"></p>
+        <p class="ai-note">پس از کپی، یکی از سرویس‌ها را باز کن و متن را در گفت‌وگو بچسبان. برای حفظ حریم خصوصی، اطلاعات شخصی یا محرمانه وارد نکن.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="steps" style="background:var(--card)">
+  <div class="wrap">
+    <h2>از ایده تا تیم‌سازی</h2>
+    <p class="lead">رویداد دانشکده شروع مسیر است؛ ایده‌های منتخب برای تیم‌سازی و بوت‌کمپ معرفی می‌شوند.</p>
+    <ol class="steps">
+      <li><span class="n">۱</span><h3>ارسال ایده‌ی اولیه</h3><p>ایده‌ات را با کمک راهنمای این صفحه بنویس و برای مسئول رشته‌ات بفرست.</p></li>
+      <li><span class="n">۲</span><h3>ارزیابی و انتخاب</h3><p>ایده‌ها بر اساس مسئله، راهکار، امکان‌پذیری اولیه و ظرفیت رشد بررسی می‌شوند.</p></li>
+      <li><span class="n">۳</span><h3>ارائه و داوری</h3><p>صاحبان ایده‌های منتخب، طرحشان را در رویداد دانشکده برای داوران ارائه می‌کنند.</p></li>
+      <li><span class="n">۴</span><h3>تیم‌سازی و بوت‌کمپ</h3><p>ایده‌های منتخب می‌توانند وارد مسیر تیم‌سازی بین‌رشته‌ای و بوت‌کمپ شوند؛ مسیری برای اعتبارسنجی ایده، طراحی مدل کسب‌وکار و برنامه‌ریزی نمونه‌ی اولیه.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <h2>طرح اولیه را چطور بنویسم؟</h2>
+    <p class="lead">یک متن کوتاه و روشن کافی است. اگر به این پنج سؤال جواب بدهی، طرحت آماده است.</p>
+    <div class="plan">
+      <ul class="qs">
+        <li><b>مسئله چیست؟</b><span>چه نیاز یا مشکلی را می‌بینی؟</span></li>
+        <li><b>ایده‌ات چیست؟</b><span>در دو سه جمله بگو چه می‌سازی یا ارائه می‌دهی.</span></li>
+        <li><b>مخاطبش کیست؟</b><span>چه کسانی از آن استفاده می‌کنند؟</span></li>
+        <li><b>چطور اجرا می‌شود؟</b><span>اولین قدم‌ها و چیزهایی که لازم داری.</span></li>
+        <li><b>چطور درآمد یا اثر می‌سازد؟</b><span>چرا کسی برایش وقت یا هزینه می‌گذارد؟</span></li>
+      </ul>
+      <div class="tpl">
+        <h3>قالب آماده برای پیام</h3>
+        <pre id="tpl">نام و نام‌خانوادگی:
+رشته و ورودی:
+عنوان ایده:
+مسئله:
+ایده در دو سه جمله:
+مخاطبان:
+روش اجرا:
+درآمد یا اثر:</pre>
+        <button class="btn" id="copy" type="button">کپی قالب</button><span class="ok" id="ok" role="status">کپی شد</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="send" style="background:var(--card)">
+  <div class="wrap">
+    <h2>ایده‌ات را برای چه کسی بفرستی؟</h2>
+    <p class="lead">رشته‌ات را پیدا کن و طرحت را در تلگرام به همان آی‌دی بفرست.</p>
+    <div class="grid">
+      <div class="who"><h3>ادبیات کردی، فارسی و عربی</h3><p>دانشجویان این سه رشته ایده‌هایشان را به یک آی‌دی می‌فرستند.</p><a href="https://t.me/niushaAP" target="_blank" rel="noopener">ارسال در تلگرام <bdi>@niushaAP</bdi></a></div>
+      <div class="who"><h3>ادبیات انگلیسی</h3><p>ایده‌ات را برای مسئول این رشته بفرست.</p><a href="https://t.me/Zhinalatifi" target="_blank" rel="noopener">ارسال در تلگرام <bdi>@Zhinalatifi</bdi></a></div>
+      <div class="who"><h3>آموزش زبان انگلیسی</h3><p>ایده‌ات را برای مسئول این رشته بفرست.</p><a href="https://t.me/iamHapol" target="_blank" rel="noopener">ارسال در تلگرام <bdi>@iamHapol</bdi></a></div>
+      <div class="who"><h3>زبان‌شناسی</h3><p>ایده‌ات را برای مسئول این رشته بفرست.</p><a href="https://t.me/Xatredadbexs" target="_blank" rel="noopener">ارسال در تلگرام <bdi>@Xatredadbexs</bdi></a></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>سؤال‌های پرتکرار</h2>
+    <details><summary>ایده‌ام هنوز کامل نیست. بفرستم؟</summary><p>بله. از شما یک طرح اولیه خواسته شده، نه یک طرح نهایی. ایده‌های منتخب بعداً فرصت ارائه و توسعه پیدا می‌کنند.</p></details>
+    <details><summary>ایده حتماً باید فناورانه باشد؟</summary><p>نه. مهم این است که ایده خلاقانه باشد و ظرفیت رشد و تبدیل‌شدن به یک طرح اجرایی را داشته باشد.</p></details>
+    <details><summary>بعد از ارسال چه اتفاقی می‌افتد؟</summary><p>ایده‌ها ارزیابی می‌شوند و صاحبان ایده‌های منتخب برای ارائه و داوری دعوت خواهند شد. ایده‌های منتخب می‌توانند در ادامه وارد مسیر تیم‌سازی و بوت‌کمپ شوند.</p></details>
+    <details><summary>رشته‌ام در فهرست نیست یا سؤال دیگری دارم</summary><p>از کانال رویداد پیگیری کن. اطلاعیه‌های بعدی هم همان‌جا اعلام می‌شود.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>ایده‌ی خوب منتظر نمی‌ماند.</h2>
+    <p>اطلاعیه‌ها و خبرهای رویداد در کانال است.</p>
+    <a class="btn" href="https://t.me/+BiX9-cd4A0c4ODg0" target="_blank" rel="noopener">عضویت در کانال</a>
+  </div>
+</footer>
+
+<script>
+var ideaInterest=document.getElementById("idea-interest");
+var aiPrompt=document.getElementById("ai-prompt");
+var aiCopyStatus=document.getElementById("ai-copy-status");
+function updateAiPrompt(){
+  var interest=ideaInterest.value.trim()||"هنوز حوزه مشخصی انتخاب نکرده‌ام";
+  aiPrompt.value="من دانشجو هستم و می‌خواهم برای رویداد ایده‌پردازی دانشکده ادبیات و زبان‌های خارجی دانشگاه کردستان یک ایده‌ی اولیه پیدا یا تکمیل کنم. موضوع فراخوان، ایده‌های استارتاپی در حوزه زبان و ادبیات است.\n\nرشته، علاقه یا مسئله‌ای که به آن فکر می‌کنم: "+interest+"\n\nلطفاً با چند سؤال کوتاه کمکم کن مسئله‌ای واقعی و متناسب با این حوزه پیدا کنم. سپس حداکثر سه ایده‌ی قابل‌اجرا در مقیاس دانشجویی پیشنهاد بده و برای هرکدام این موارد را روشن کن: عنوان، مسئله یا نیاز، راهکار پیشنهادی، مخاطب یا مشتری احتمالی، وجه تمایز، اعضا یا مهارت‌های موردنیاز تیم. فرض‌ها را از واقعیت جدا کن و برای جزئیات فراخوان مثل مهلت، شرایط شرکت یا حمایت مالی چیزی حدس نزن؛ اگر اطلاعاتی لازم است، از من سؤال کن. اگر ایده‌ای به گردشگری مربوط است، آن را فقط در پیوند روشن با ادبیات، فرهنگ یا میراث زبانی مطرح کن.";
+}
+ideaInterest.addEventListener("input",updateAiPrompt);
+updateAiPrompt();
+document.getElementById("copy-ai-prompt").addEventListener("click",async function(){
+  try{
+    await navigator.clipboard.writeText(aiPrompt.value);
+    aiCopyStatus.textContent="متن آماده کپی شد؛ حالا آن را در گفت‌وگوی هوش مصنوعی بچسبان.";
+  }catch(e){
+    aiPrompt.focus(); aiPrompt.select();
+    aiCopyStatus.textContent="کپی خودکار انجام نشد؛ متن انتخاب شده را دستی کپی کن.";
+  }
+});
+document.getElementById("copy").addEventListener("click",async function(){
+  var t=document.getElementById("tpl").textContent, ok=document.getElementById("ok");
+  try{
+    await navigator.clipboard.writeText(t);
+    ok.textContent="کپی شد"; 
+  }catch(e){
+    var r=document.createRange(); r.selectNodeContents(document.getElementById("tpl"));
+    var s=getSelection(); s.removeAllRanges(); s.addRange(r);
+    ok.textContent="متن انتخاب شد، کپی کن";
+  }
+  ok.classList.add("on"); setTimeout(function(){ok.classList.remove("on")},2500);
+});
+</script>
+</body>
+</html>
